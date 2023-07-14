@@ -3,9 +3,9 @@
 <head>
 	
 	<script>
-		fetch('http://ip-api.com/json/?fields=61439')
-			.then(res => res.json())
-			.then(res => console.log(res));
+		fetch('https://api.ipify.org/?format=json')
+			.then(response => response.json())
+			.then(data =>console.log(data.ip));
 		//if (window.opener && !window.opener.closed) {window.location.href = "https://earnkaro.com/blog/earn-money-without-investment-online/";}
 	</script>
 	
