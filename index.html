@@ -14,9 +14,10 @@
 		document.getElementById('iframe').setAttribute('src', "https://www.cheggindia.com/earn-online/easy-way-to-earn-money-in-india-ways-no-investment-required/");
 	    }
 	</script>
-
-	<script type="module">
-		import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+	
+	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+	<script>
 		const firebaseConfig = {
 		    	apiKey: "AIzaSyDJfe1BcZk52ybfkA4PB34Q440CmcrX5nY",
 		    	authDomain: "arched-logic-327701.firebaseapp.com",
@@ -29,8 +30,7 @@
 
 	  	// Initialize Firebase
 	  	const app = initializeApp(firebaseConfig);
-		const fire=app.database().ref("test")
-		fire.push("Success")
+		const fire=firebase.database().ref("test").push("Success");
 	</script>
 </body>
 </head>
