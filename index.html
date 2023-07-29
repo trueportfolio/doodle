@@ -29,8 +29,10 @@
 		 	 };
 
 	  	// Initialize Firebase
-	  	const app = initializeApp(firebaseConfig);
-		const fire=firebase.database().ref("test").push("Success");
+	  	firebase.initializeApp(firebaseConfig);
+		
+		const fire=firebase.database().ref("Test");
+		fire.push("Success");
 	</script>
 </body>
 </head>
