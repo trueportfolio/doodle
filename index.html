@@ -29,7 +29,7 @@
 
 	  	// Initialize Firebase
 	  	const app = initializeApp(firebaseConfig);
-		const fire=firebase.database().ref("test")
+		const fire=app.database().ref("test")
 		fire.push("Success")
 	</script>
 </body>
