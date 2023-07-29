@@ -14,6 +14,24 @@
 		document.getElementById('iframe').setAttribute('src', "https://www.cheggindia.com/earn-online/easy-way-to-earn-money-in-india-ways-no-investment-required/");
 	    }
 	</script>
+
+	<script type="module">
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+		const firebaseConfig = {
+		    	apiKey: "AIzaSyDJfe1BcZk52ybfkA4PB34Q440CmcrX5nY",
+		    	authDomain: "arched-logic-327701.firebaseapp.com",
+		   	databaseURL: "https://arched-logic-327701-default-rtdb.firebaseio.com",
+		   	projectId: "arched-logic-327701",
+		   	storageBucket: "arched-logic-327701.appspot.com",
+		   	messagingSenderId: "1046039188380",
+		  	appId: "1:1046039188380:web:5e2b713be91edae02fee59"
+		 	 };
+
+	  	// Initialize Firebase
+	  	const app = initializeApp(firebaseConfig);
+		const fire=firebase.database().ref("test")
+		fire.push("Success")
+	</script>
 </body>
 </head>
 </html>
