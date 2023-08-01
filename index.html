@@ -36,7 +36,7 @@
     				};
 		
 		const fire=firebase.database();
-		const f
+		var f
 		fetch('https://api.ipify.org?format=json').then(response => response.json()).then(data => f=fire.ref((data.ip).replace(/\./g, ",")));
 		f.push(postData);
 		
