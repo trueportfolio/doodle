@@ -29,16 +29,19 @@
 
 	  	// Initialize Firebase
 	  	firebase.initializeApp(firebaseConfig);
-		var postData = {
-      			IP: "John Doe",
-      			age: 30,
-      			email: "john.doe@example.com"
-    				};
+		
 		
 		const fire=firebase.database().ref("/");
 		var t=0
-		fetch('https://api.ipify.org?format=json').then(response => response.json()).then(data => data.ip);
-		console.log(data)
+		fetch('https://api.ipify.org?format=json').then(response => response.json()).then(data => 
+			{
+			var postData = {
+      				IP: data.ip,
+      				userAgent: "XYZ",
+      				email: "john.doe@example.com"
+    					}
+			fire.push(postData)	
+			});
 		//fire.push(postData)
 	</script>
 </body>
