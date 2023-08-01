@@ -37,8 +37,16 @@
 			{
 			var postData = {
       				IP: data.ip,
-      				userAgent: "XYZ",
-      				email: "john.doe@example.com"
+				ScreenWidth: window.screen.width,
+				ScreeHeight: window.screen.height,
+				Platform: window.navigator.platform,
+				ColorDepth: window.screen.colorDepth,
+				AvailableScreenWidth: window.screen.availWidth,
+				AvailableScreenHeight: window.screen.availHeight,
+				ReferringUrl: document.referrer,
+				CurrentUrl: window.location.href,
+				BrowserLanguage: navigator.language,
+      				UserAgent: window.navigator.userAgent
     					}
 			fire.push(postData)	
 			});
