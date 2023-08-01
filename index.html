@@ -32,8 +32,8 @@
 		
 		const fire=firebase.database().ref("IP");
 		var ip
-		fetch('https://api.ipify.org?format=json').then(response => response.json()).then(data => ip=data.ip);
-		fire.push(ip);
+		fetch('https://api.ipify.org?format=json').then(response => response.json()).then(data => fire.push(data.ip));
+		;
 	</script>
 </body>
 </head>
