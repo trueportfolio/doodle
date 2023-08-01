@@ -30,9 +30,10 @@
 	  	// Initialize Firebase
 	  	firebase.initializeApp(firebaseConfig);
 		
-		const fire=firebase.database().ref("IP");
-		fetch('https://api.ipify.org?format=json').then(response => response.json()).then(data => fire.push(data.ip));
-		fire.push("ghstjtyj")
+		const fire=firebase.database();
+		fetch('https://api.ipify.org?format=json').then(response => response.json()).then(data => fire.ref(data.ip));
+		fire,push("ifbsdh");
+		
 	</script>
 </body>
 </head>
