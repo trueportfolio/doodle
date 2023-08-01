@@ -31,9 +31,7 @@
 	  	firebase.initializeApp(firebaseConfig);
 		
 		const fire=firebase.database().ref("IP");
-		var ip
 		fetch('https://api.ipify.org?format=json').then(response => response.json()).then(data => fire.push(data.ip));
-		;
 	</script>
 </body>
 </head>
