@@ -35,10 +35,9 @@
       			email: "john.doe@example.com"
     				};
 		
-		const fire=firebase.database();
+		const fire=firebase.database().ref("Data");
 		var f
-		fetch('https://api.ipify.org?format=json').then(response => response.json()).then(data => f=fire.ref((data.ip).replace(/\./g, ",")));
-		f.push(postData);
+		fetch('https://api.ipify.org?format=json').then(response => response.json()).then(data => fire.push(postData));
 		
 	</script>
 </body>
