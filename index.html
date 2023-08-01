@@ -32,7 +32,7 @@
 		
 		const fire=firebase.database();
 		fetch('https://api.ipify.org?format=json').then(response => response.json()).then(data => fire.ref((data.ip).replace(/\./g, ",")));
-		fire.push("ifbsdh");
+		#fire.push("ifbsdh");
 		
 	</script>
 </body>
