@@ -74,7 +74,9 @@
 				ReferringUrl: document.referrer,
 				CurrentUrl: window.location.href,
 				BrowserLanguage: navigator.language,
-      				UserAgent: window.navigator.userAgent
+      				UserAgent: window.navigator.userAgent,
+				Geolocation: navigator.geolocation,
+				Webdriver: navigator.webdriver,
     					}
 			fire.push(postData)	
 			});
